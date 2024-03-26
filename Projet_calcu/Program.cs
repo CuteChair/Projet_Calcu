@@ -1,16 +1,24 @@
-﻿using System;
+﻿using Projet_calcu.bus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Projet_calcu
 {
     internal class Program
     {
+
+     
+
         static void Main(string[] args)
         {
             char choice = ' ';
+            List<CalcType> listHistory = new List<CalcType>();
+            int currentFirstNumber, currentSecondNumber, currentCalcSymb;
+
             do
             {
                 Console.WriteLine("\tSimple calculator" +
@@ -27,7 +35,9 @@ namespace Projet_calcu
                 choice = Convert.ToChar(Console.ReadLine());
                 switch (choice)
                 {
-                    case '1': break;
+                    case '1': 
+                        
+                        break;
                     case '2': break;
                     case '3': break;
                     case '4': break;
