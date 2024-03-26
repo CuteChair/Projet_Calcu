@@ -42,12 +42,31 @@ namespace Projet_calcu.bus
             if (calcSymb == '+')
             {
                 this.answer = this.firstNumb + this.secondNumb;
-                state = this.firstNumb + " " + this.calcSymb + " " + this.secondNumb + " " + this.secondNumb;
+                 
+            } 
 
-                return state;
-              
+            if (calcSymb == '-')
+            {
+                this.answer = this.firstNumb - this.secondNumb;
+
             }
-            
+
+            if (calcSymb == '/')
+            {
+                this.answer = this.firstNumb / this.secondNumb;        
+            }
+
+            if (calcSymb == '*')
+            {
+                this.answer = this.firstNumb * this.secondNumb;
+
+            }
+
+
+            state = this.firstNumb + " " + this.calcSymb + " " + this.secondNumb + " " + this.answer;
+
+            return state;
+
         }
     }
 }
