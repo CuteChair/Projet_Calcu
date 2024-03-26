@@ -24,6 +24,7 @@ namespace Projet_calcu
                     "\n-5- Exit the application : ");
 
                 Console.Write("\nYour Choice : ");
+                choice = Convert.ToChar(Console.ReadLine());
                 switch (choice)
                 {
                     case '1': break;
@@ -36,7 +37,7 @@ namespace Projet_calcu
                 }
             } while (choice != '5');
 
-  
+            Console.ReadKey();
         }
     }
 }

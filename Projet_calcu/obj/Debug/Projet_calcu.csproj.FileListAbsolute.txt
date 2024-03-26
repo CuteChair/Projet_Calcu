@@ -1,0 +1,7 @@
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\bin\Debug\Projet_calcu.exe.config
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\bin\Debug\Projet_calcu.exe
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\bin\Debug\Projet_calcu.pdb
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\obj\Debug\Projet_calcu.csproj.AssemblyReference.cache
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\obj\Debug\Projet_calcu.csproj.CoreCompileInputs.cache
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\obj\Debug\Projet_calcu.exe
+C:\Users\Jules\OneDrive\Bureau\Projet_Calc\Projet_Calcu\Projet_calcu\obj\Debug\Projet_calcu.pdb
