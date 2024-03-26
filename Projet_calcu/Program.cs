@@ -10,6 +10,33 @@ namespace Projet_calcu
     {
         static void Main(string[] args)
         {
+            char choice = ' ';
+            do
+            {
+                Console.WriteLine("\tSimple calculator" +
+                    "" +
+                    "\n\nChoose your option :" +
+                    "" +
+                    "\n-1- Acces the simple calculator : " +
+                    "\n-2- View the history :" +
+                    "\n-3- Acces Mini Game :" +
+                    "\n-4- Change user :" +
+                    "\n-5- Exit the application : ");
+
+                Console.Write("\nYour Choice : ");
+                switch (choice)
+                {
+                    case '1': break;
+                    case '2': break;
+                    case '3': break;
+                    case '4': break;
+                    case '5': break;
+                    default: break;
+
+                }
+            } while (choice != '5');
+
+  
         }
     }
 }
