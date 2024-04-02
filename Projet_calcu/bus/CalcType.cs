@@ -63,7 +63,7 @@ namespace Projet_calcu.bus
             }
 
 
-            state = this.firstNumb + " " + this.calcSymb + " " + this.secondNumb + " " + this.answer;
+            state = this.firstNumb + " " + this.calcSymb + " " + this.secondNumb + " = " + this.answer;
 
             return state;
 

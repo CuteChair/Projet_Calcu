@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,13 +14,52 @@ namespace Projet_calcu
     internal class Program
     {
 
-     
+        static void Calc()
+        {
+            
+            CalcType currentCalc = new CalcType();
+            Console.WriteLine("\n\tSimple Calculator : \n\n");
+            
+
+           symb: Console.WriteLine("Choose the Calculation symbol (+, -, *, / ): ");
+
+            currentCalc.CalcSymb = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("\nAssign the value '12345' to the first number to quit\n\n");
+
+            if (currentCalc.CalcSymb == '+' || currentCalc.CalcSymb == '-' || currentCalc.CalcSymb == '*' || currentCalc.CalcSymb == '/')
+            {
+                do
+                {
+                firstNumb: Console.Write("Input first number : ");
+                    try
+                    {
+                        currentCalc.FirstNumb = Convert.ToDouble(Console.ReadLine());
+                    }
+                    catch { Console.WriteLine("Please input a valid number"); goto firstNumb; }
+                secNumb: Console.Write("Input second number : ");
+                    try
+                    {
+                        currentCalc.SecondNumb = Convert.ToDouble(Console.ReadLine());
+                    }
+                    catch { Console.WriteLine("Please input a valid number"); goto secNumb; }
+
+                    Console.WriteLine(currentCalc.GetCalcState());
+
+                } while (currentCalc.FirstNumb != 12345);
+            } else { Console.WriteLine("You must choose a valid symbol!"); goto symb; }
+           
+           
+
+        }
 
         static void Main(string[] args)
         {
             char choice = ' ';
             List<CalcType> listHistory = new List<CalcType>();
-            int currentFirstNumber, currentSecondNumber, currentCalcSymb;
+            int currentFirstNumber, currentSecondNumber, currentCalcSymb, currentAnswer;
+
+            
 
             do
             {
@@ -41,34 +83,9 @@ namespace Projet_calcu
                 switch (choice)
                 {
                     case '1':
-                        char opt = ' ';
 
-                        do
-                        {
-                            Console.WriteLine("\n\tWelcome to the simple calculator, please choose from these options : " +
-                           "" +
-                           "\n -1- Addition (+) " +
-                           "\n -2- Substraction (-)" +
-                           "\n -3- Multiplication (x)" +
-                           "\n -4- Division (/)" +
-                           "\n -5- Go Back to Menu");
-                            Console.Write("\n\nYour Choice : ");
-                            try
-                            {
-                                opt = Convert.ToChar(Console.ReadLine());
-                            } catch { Console.WriteLine("You must choose between 1 - 5"); }
-                            
-                            switch(opt)
-                            {
-                                case '1': break;
-                                case '2': break;
-                                case '3': break;
-                                case '4': break;
-                                default: Console.WriteLine("You must choose between 1 - 5"); break;
-
-                            }
-
-                        } while (opt != '5');
+                        Calc();
+                       
                        
                         break;
                     case '2': break;
