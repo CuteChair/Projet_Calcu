@@ -77,12 +77,54 @@ namespace Projet_calcu
 
         }
 
+        static void UserName()
+        {
+            List<User> listOfUser = new List<User>();
+            if (listOfUser.Count == 0)
+            {
+                User user = new User();
+                Console.Write("Choose your user name : ");
+                user.UserName = Console.ReadLine();
+                user.UserId = listOfUser.Count;
+                listOfUser.Add(user);
+            }
+            else
+            {
+                bool findUser = false;
+                int count;
+                foreach (User item in listOfUser) 
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine("Press Esc to create a new account or a number to find an existing one");
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    User user = new User();
+                    Console.Write("Choose your user name : ");
+                    user.UserName = Console.ReadLine();
+                    user.UserId = listOfUser.Count;
+                    listOfUser.Add(user);
+                }
+                count = Convert.ToInt32(Console.ReadLine());
+
+                foreach (User item in listOfUser)
+                {
+                    if (count = )
+                }
+
+
+
+            }
+            
+            
+            Console.WriteLine();
+        }
+
         static void Main(string[] args)
         {
             char choice = ' ';
             List<CalcType> listHistory = new List<CalcType>();
-            int currentFirstNumber, currentSecondNumber, currentCalcSymb, currentAnswer;
-
+            
             
 
             do
@@ -114,7 +156,10 @@ namespace Projet_calcu
                         break;
                     case '2': break;
                     case '3': break;
-                    case '4': break;
+                    case '4': 
+                        
+                        break;
+
                     case '5':
                         Console.WriteLine("Youre leaving the application");
                         break;
