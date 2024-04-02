@@ -29,7 +29,7 @@ namespace Projet_calcu
             } catch { Console.WriteLine("You must choose a valid symbol!"); goto symb; }
             
 
-            Console.WriteLine("\nPress Esc key to quit or C to change symbol\n\n");
+            Console.WriteLine("\nPress Esc key to quit\n\n");
 
             if (currentCalc.CalcSymb == '+' || currentCalc.CalcSymb == '-' || currentCalc.CalcSymb == '*' || currentCalc.CalcSymb == '/')
             {
@@ -61,15 +61,7 @@ namespace Projet_calcu
                         goto end;
 
                     }
-                    if (Console.ReadKey().Key == ConsoleKey.C)
-                    {
-                       ok = true;
-
-                    }
-                    if (ok)
-                    {
-                        Console.WriteLine("Hello");
-                    }
+                    
                     try
                     {
                         currentCalc.SecondNumb = Convert.ToDouble(Console.ReadLine());
@@ -123,7 +115,9 @@ namespace Projet_calcu
                     case '2': break;
                     case '3': break;
                     case '4': break;
-                    case '5': break;
+                    case '5':
+                        Console.WriteLine("Youre leaving the application");
+                        break;
                     default: Console.WriteLine("You must choose between 1 - 5"); break;
 
                 }
