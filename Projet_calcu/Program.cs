@@ -16,28 +16,60 @@ namespace Projet_calcu
 
         static void Calc()
         {
-            
+            bool ok = false;
+            string Exit = "";
             CalcType currentCalc = new CalcType();
             Console.WriteLine("\n\tSimple Calculator : \n\n");
             
 
-           symb: Console.WriteLine("Choose the Calculation symbol (+, -, *, / ): ");
+           symb: Console.Write("Choose the Calculation symbol (+, -, *, / ): ");
+            try
+            {
+                currentCalc.CalcSymb = Convert.ToChar(Console.ReadLine());
+            } catch { Console.WriteLine("You must choose a valid symbol!"); goto symb; }
+            
 
-            currentCalc.CalcSymb = Convert.ToChar(Console.ReadLine());
-
-            Console.WriteLine("\nAssign the value '12345' to the first number to quit\n\n");
+            Console.WriteLine("\nPress Esc key to quit or C to change symbol\n\n");
 
             if (currentCalc.CalcSymb == '+' || currentCalc.CalcSymb == '-' || currentCalc.CalcSymb == '*' || currentCalc.CalcSymb == '/')
             {
                 do
                 {
                 firstNumb: Console.Write("Input first number : ");
+                   
+                    if (Console.ReadKey().Key == ConsoleKey.Escape)
+                    {
+                        currentCalc.FirstNumb = 0;
+                        currentCalc.SecondNumb = 0;
+                        goto end;
+                        
+                    }
+                   
+
+
+
                     try
                     {
                         currentCalc.FirstNumb = Convert.ToDouble(Console.ReadLine());
                     }
                     catch { Console.WriteLine("Please input a valid number"); goto firstNumb; }
                 secNumb: Console.Write("Input second number : ");
+                    if (Console.ReadKey().Key == ConsoleKey.Escape)
+                    {
+                        currentCalc.FirstNumb = 0;
+                        currentCalc.SecondNumb = 0;
+                        goto end;
+
+                    }
+                    if (Console.ReadKey().Key == ConsoleKey.C)
+                    {
+                       ok = true;
+
+                    }
+                    if (ok)
+                    {
+                        Console.WriteLine("Hello");
+                    }
                     try
                     {
                         currentCalc.SecondNumb = Convert.ToDouble(Console.ReadLine());
@@ -45,8 +77,8 @@ namespace Projet_calcu
                     catch { Console.WriteLine("Please input a valid number"); goto secNumb; }
 
                     Console.WriteLine(currentCalc.GetCalcState());
-
-                } while (currentCalc.FirstNumb != 12345);
+                end: Exit = "Exit";
+                } while (Exit != "Exit");
             } else { Console.WriteLine("You must choose a valid symbol!"); goto symb; }
            
            
