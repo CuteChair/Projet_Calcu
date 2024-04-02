@@ -42,24 +42,25 @@ namespace Projet_calcu.bus
             if (calcSymb == '+')
             {
                 this.answer = this.firstNumb + this.secondNumb;
-                 
+                this.answer = Math.Round(this.answer, 2);
             } 
 
             if (calcSymb == '-')
             {
                 this.answer = this.firstNumb - this.secondNumb;
-
+                this.answer = Math.Round(this.answer, 2);
             }
 
             if (calcSymb == '/')
             {
-                this.answer = this.firstNumb / this.secondNumb;        
+                this.answer = this.firstNumb / this.secondNumb;
+                this.answer = Math.Round(this.answer, 2);
             }
 
             if (calcSymb == '*')
             {
                 this.answer = this.firstNumb * this.secondNumb;
-
+                this.answer = Math.Round(this.answer, 2);
             }
 
 
